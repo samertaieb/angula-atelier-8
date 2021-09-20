@@ -1,0 +1,15 @@
+<div *ngFor="let user of Users">
+  id :{{ user.id }} <br />
+  name:{{ user.name }} <br />
+  username : {{ user.username }} <br />
+  email : {{ user.email }}
+  <button (click)="suppression(user.id)">supprimer</button>
+  <a routerLink="/userUpdate/{{ user.id }}">det</a>
+</div>
+<form [formGroup]="userForm" (ngSubmit)="ajouter()">
+  <input type="text" formControlName="id" />
+  <input type="text" formControlName="name" />
+  <input type="text" formControlName="username" />
+  <input type="text" formControlName="email" />
+  <button type="submit">ajouter</button>
+</form>

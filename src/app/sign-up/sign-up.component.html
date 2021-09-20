@@ -1,0 +1,6 @@
+<p>sign-up works!</p>
+<form [formGroup]="userSignUp" (ngSubmit)="register()">
+  <input type="text" formControlName="email" />
+  <input type="password" formControlName="password" />
+  <button type="submit">sign up</button>
+</form>

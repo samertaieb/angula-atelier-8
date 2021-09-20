@@ -1,0 +1,16 @@
+<div *ngIf="user != undefined">
+  <form [formGroup]="userFormUpdate" (ngSubmit)="Modifier()">
+    id:<input type="text" [(ngModel)]="user.id" formControlName="id" /> <br />
+    name:<input type="text" [(ngModel)]="user.name" formControlName="name" />
+    <br />
+    username:<input
+      type="text"
+      [(ngModel)]="user.username"
+      formControlName="username"
+    />
+    <br />
+    email:<input type="text" [(ngModel)]="user.email" formControlName="email" />
+    <br />
+    <button type="submit">Modifier</button>
+  </form>
+</div>
